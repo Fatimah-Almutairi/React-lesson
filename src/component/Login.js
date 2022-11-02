@@ -1,13 +1,18 @@
-import React , {useState} from 'react';
-import axios from 'axios'
+import React , {useState, useEffect} from 'react';
+import {  useNavigate } from "react-router-dom"
+import axios from 'axios';
+import { Flex, Box, FormControl, FormLabel, Input,  Stack,Button,Heading, useColorModeValue} from '@chakra-ui/react';
+
 
 
 function Login() {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
 
-    const API = 'https://6362424b66f75177ea2a9980.mockapi.io/ToDoList';
+    const navigat = useNavigate();
 
+
+    const API = 'https://6362424b66f75177ea2a9980.mockapi.io/ToDoList';
 
     const submit = () => {
         axios.post(API , {
@@ -15,15 +20,44 @@ function Login() {
             password,
         }).then( (res) =>{
             console.log(res);
+            navigat('/Cards');
         })
     }
+
+    useEffect(() => {
+      localStorage.setItem('Email', JSON.stringify(email));
+      localStorage.setItem('Password', JSON.stringify(password));
+
+    }, [email][password]);
+ 
   return (
-    <div className="login">
-        <input placeholder='Your Email' onChange= {e => {setEmail(e.target.value) }}></input><br />
-        <input placeholder='Password' onChange= {e => {setPassword(e.target.value) }}></input><br />
-        <button onClick ={submit} >Submit</button>
-    </div>
+    <>
+        <Flex minH={'100vh'} align={'center'} justify={'center'} bg={useColorModeValue('gray.100', 'gray.800')}>
+        <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
+          <Stack align={'center'}>
+            <Heading fontSize={'4xl'}>Sign in to your account</Heading>
+          </Stack>
+          <Box rounded={'lg'} bg={useColorModeValue('white', 'gray.700')} boxShadow= {'xl'} p={8}>
+            <Stack spacing={4}>
+              <FormControl id="email">
+                <FormLabel>Email address</FormLabel>
+                <Input type="email" onChange= {e => {setEmail(e.target.value) }} />
+              </FormControl>
+              <FormControl id="password">
+                <FormLabel>Password</FormLabel>
+                <Input type="password" onChange= {e => {setPassword(e.target.value) }}/>
+              </FormControl>
+              <Stack spacing={10}>
+                <Button bg={'gray.500'}color={'white'} _hover={{bg: 'gray.700', }} onClick ={submit}> Sign in </Button>
+              </Stack>
+            </Stack>
+          </Box>
+        </Stack>
+      </Flex>
+
+    </>
   )
 }
 
 export default Login
+

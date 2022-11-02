@@ -6,7 +6,7 @@ function Store() {
   // const navigat = useNavigate();
   return (
     <div>
-      <h1>Hello</h1>
+      <h1>Home Page</h1>
       {/* <button onClick={() => { navigat('/'); }}>Go Back</button> */}
     </div>
   )

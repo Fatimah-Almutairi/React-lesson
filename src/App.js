@@ -2,31 +2,33 @@
 import './App.css';
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
+import Login from './component/Login';
 import { Image} from '@chakra-ui/react';
 import Create from './component/Create';
 import Rout from './component/Rout';
 
 
 function App() {
-  const [get, setGet] = useState([]);      
-  const API = 'https://6362424b66f75177ea2a9980.mockapi.io/ToDoList';
+  // const [get, setGet] = useState([]);      
+  // const API = 'https://6362424b66f75177ea2a9980.mockapi.io/ToDoList';
 
 
 
-  useEffect ( () => {
-    axios.get(API).then( (res) => {
-      console.log(res.data);
-      setGet(res.data);
-    })
-  }, [])
+  // useEffect ( () => {
+  //   axios.get(API).then( (res) => {
+  //     console.log(res.data);
+  //     setGet(res.data);
+  //   })
+  // }, [])
 
   return (
 
     <div>
-
+      <Rout>
+      
  
        <Create />
-      <div>
+      {/* <div>
         {get.map(ele => {
           return (
             <div>
@@ -38,11 +40,11 @@ function App() {
           </div>)
         })}
       </div> 
+  */}
  
- 
-{/* <Rout>
 
-</Rout> */}
+
+</Rout>
     </div>
 
   );

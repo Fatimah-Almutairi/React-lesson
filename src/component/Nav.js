@@ -6,12 +6,10 @@ function Nav() {
   return (
     <div>
         <ul className='nav'>
-            <li>
-            {/* <Link to ="/Store">Store</Link> */}
-            </li>
             <li><Link to ="/Services">Services</Link></li>
             <li><Link to ="/About">About</Link></li>
-            <li><Link to ="/Contact">Contact</Link></li>
+            <li><Link to ="Login">Login</Link></li>
+            <li><Link to ="/Cards">Cards</Link></li>
         </ul>
         {/* <button onClick={() => { navigat('/'); }}>Go Back</button> */}
     </div>
