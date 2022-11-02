@@ -28,8 +28,8 @@ a{
 }
 .card{
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 50px;
 
   /* grid-template-rows:  repeat(3,1fr); */
 
