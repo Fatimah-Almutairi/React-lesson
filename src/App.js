@@ -1,9 +1,8 @@
 // import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import React, {useEffect, useState} from 'react';
-import axios from 'axios';
-import Login from './component/Login';
-import { Image} from '@chakra-ui/react';
+// import axios from 'axios';
+// import { Image} from '@chakra-ui/react';
 import Create from './component/Create';
 import Rout from './component/Rout';
 
