@@ -29,6 +29,10 @@ function Login() {
       localStorage.setItem('Password', JSON.stringify(password));
 
     }, [email][password]);
+
+    // useEffect(() => {
+    //   localStorage.setItem('Password', JSON.stringify(password));
+    // }, [password]);
  
   return (
     <>
