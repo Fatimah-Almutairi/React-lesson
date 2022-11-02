@@ -11,7 +11,7 @@ function Rout() {
     <>
         <Nav />
       <Routes>
-        <Route path="/Store" element={<Store />}></Route>
+        <Route path="/" element={<Store />}></Route>
         <Route path="/Services" element={<Services />}></Route>
         <Route path="/About" element={<About />}></Route>
       </Routes>

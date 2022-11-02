@@ -1,13 +1,13 @@
 import React from 'react'
-import {  useNavigate } from "react-router-dom"
+// import {  useNavigate } from "react-router-dom"
 
 
 function Store() {
-  const navigat = useNavigate();
+  // const navigat = useNavigate();
   return (
     <div>
       <h1>Hello</h1>
-      <button onClick={() => { navigat('../App'); }}>Go Back</button>
+      {/* <button onClick={() => { navigat('/'); }}>Go Back</button> */}
     </div>
   )
 }

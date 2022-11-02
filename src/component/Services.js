@@ -13,7 +13,7 @@ function Services() {
             <li>Services 5</li>
         </ul>
         <button onClick={() => {
-        navigat('../App');
+        navigat('/');
       }}>Go Back</button>
     </div>
   )

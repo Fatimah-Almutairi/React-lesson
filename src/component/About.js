@@ -7,7 +7,7 @@ function About() {
     <div>
         <p>Here Some Text About Us</p>
         <button onClick={() => {
-        navigat('../App');
+        navigat('/');
       }}>Go Back</button>
     </div>
 
