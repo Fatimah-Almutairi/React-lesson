@@ -15,20 +15,32 @@ function Login() {
     const API = 'https://6362424b66f75177ea2a9980.mockapi.io/ToDoList';
 
     const submit = () => {
+      //  e.preventDefault();
         axios.post(API , {
             email,
             password,
         }).then( (res) =>{
             console.log(res);
             navigat('/Cards');
+           
         })
     }
-
+    // const arr = [];
     useEffect(() => {
       localStorage.setItem('Email', JSON.stringify(email));
       localStorage.setItem('Password', JSON.stringify(password));
 
     }, [email][password]);
+
+    // arr =[...JSON.parse(localStorage.getItem('setEmail'))]
+    const [item , setItem] = useState([]);
+    useEffect(() => {
+     const item = JSON.parse(localStorage.getItem('items'));
+     if (item){
+      setItem(item)
+     }
+    }, []);    
+
 
     // useEffect(() => {
     //   localStorage.setItem('Password', JSON.stringify(password));
