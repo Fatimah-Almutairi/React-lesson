@@ -3,7 +3,7 @@ import './App.css';
 import React, {useEffect, useState} from 'react';
 // import axios from 'axios';
 // import { Image} from '@chakra-ui/react';
-import Create from './component/Create';
+// import Create from './component/Create';
 import Rout from './component/Rout';
 
 
@@ -26,7 +26,7 @@ function App() {
       <Rout>
       
  
-       <Create />
+       {/* <Create /> */}
       {/* <div>
         {get.map(ele => {
           return (

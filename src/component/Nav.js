@@ -10,6 +10,7 @@ function Nav() {
             <li><Link to ="/About">About</Link></li>
             <li><Link to ="Login">Login</Link></li>
             <li><Link to ="/Cards">Cards</Link></li>
+            <li><Link to = '/Read'>Read</Link></li>
         </ul>
         {/* <button onClick={() => { navigat('/'); }}>Go Back</button> */}
     </div>

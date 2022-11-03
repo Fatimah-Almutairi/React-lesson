@@ -6,8 +6,9 @@ import { Flex, Box, FormControl, FormLabel, Input,  Stack,Button,Heading, useCol
 
 
 function Login() {
-    const [email, setEmail] = useState()
-    const [password, setPassword] = useState()
+    const [email, setEmail] = useState( )
+    const [password, setPassword] = useState( )
+    // const [] = useState();
 
     const navigat = useNavigate();
 
@@ -21,6 +22,9 @@ function Login() {
             password,
         }).then( (res) =>{
             console.log(res);
+            localStorage.setItem("Email",res.data.email);
+            localStorage.setItem("Password",res.data.password);
+            localStorage.setItem("id",res.data.id);
             navigat('/Cards');
            
         })
